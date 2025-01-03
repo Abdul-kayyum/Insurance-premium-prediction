@@ -1,0 +1,187 @@
+
+{% extends "Base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c2833;
+            
+        }
+
+        header {
+            background-color: #1c2833;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-details {
+            max-width: 500px;
+            width: 100%;
+            height:250px;
+            background: rgb(226, 228, 230);
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .contact-details h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-details p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .form-container {
+            max-width: 400px;
+            width: 100%;
+            background: rgb(226, 228, 230);
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .contact-info .address,
+        .contact-info .phone,
+        .contact-info .email {
+            margin-bottom: 15px;
+        }
+
+        .contact-info i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<div class="contact-container">
+    <div class="contact-details">
+        <h2>Contact Details</h2>
+        <div class="contact-info">
+            <div class="address">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Dubai, UAE</p>
+            </div>
+            <div class="phone">
+                <p><i class="fas fa-phone"></i> +971 (234) 567-890</p>
+            </div>
+            <div class="email">
+                <p><i class="fas fa-envelope"></i> insurance@prediction.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h3>Send us a Message</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Font Awesome icons for visual appeal -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+{% endblock content %}
